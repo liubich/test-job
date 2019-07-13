@@ -5,9 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    layoutTexts: {
-      navItems: ['Features', 'Support', 'Blog'],
-    },
+    navItems: [
+      { text: 'Features', font: 'PT Sans' },
+      { text: 'Support', font: 'Helvetica Neue' },
+      { text: 'Blog', font: 'Helvetica Neue' },
+    ],
   },
   mutations: {
 
