@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <TinyOne />
+    <TinyOne :navItems = "navItems"/>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import TinyOne from './components/TinyOne.vue';
 
 export default {
   name: 'app',
   components: {
     TinyOne,
+  },
+  computed: {
+    ...mapState(['navItems']),
   },
 };
 </script>
