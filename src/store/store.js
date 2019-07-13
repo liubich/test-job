@@ -11,10 +11,6 @@ export default new Vuex.Store({
       { text: 'Blog', font: 'Helvetica Neue, sans-serif' },
     ],
   },
-  mutations: {
-
-  },
-  actions: {
-
-  },
+  mutations: {},
+  actions: {},
 });
