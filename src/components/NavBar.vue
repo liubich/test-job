@@ -73,7 +73,7 @@ export default {
 
 .logo__brand-name {
   font-size: 30px;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-weight: bold;
 }
 
