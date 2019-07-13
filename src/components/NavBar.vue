@@ -48,6 +48,7 @@ export default {
 .navbar {
   max-width: 1924px;
   padding-top: 60px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: center;
   background-color: #fcdb00;
