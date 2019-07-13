@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-
+    layoutTexts: {
+      navItems: ['Features', 'Support', 'Blog'],
+    },
   },
   mutations: {
 
