@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar :navItems = "navItems"/>
-    <CarouselPage />
+    <CarouselPage :pageTexts = "carouselPageTexts"/>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     CarouselPage,
   },
   computed: {
-    ...mapState(['navItems']),
+    ...mapState(['navItems', 'carouselPageTexts']),
   },
 };
 </script>
