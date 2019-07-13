@@ -1,10 +1,17 @@
 <template>
-<nav>
-  <ul>
-    <li v-for="(navItem, index) in navItems" :key = "index" :style="{'font-family': navItem.font}">{{navItem.text}}</li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li
+        v-for="(navItem, index) in navItems"
+        :key="index"
+        :style="{ 'font-family': navItem.font }"
+      >
+        {{ navItem.text }}
+      </li>
+    </ul>
+  </nav>
 </template>
+
 
 <script>
 export default {
