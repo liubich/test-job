@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <TinyOne :navItems = "navItems"/>
+    <NavBar :navItems = "navItems"/>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import TinyOne from './components/TinyOne.vue';
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'app',
   components: {
-    TinyOne,
+    NavBar,
   },
   computed: {
     ...mapState(['navItems']),

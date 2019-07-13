@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'TinyOne',
+  name: 'NavBar',
   props: {
     navItems: Array,
   },
