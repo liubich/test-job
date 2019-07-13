@@ -1,7 +1,7 @@
 <template>
   <header class="carousel-page">
     <div class="carousel-page__container">
-      <div class="carousel-page__texts-cotainer">
+      <div class="carousel-page__texts-container">
         <h1>
           {{pageTexts.mainHeader}}
         </h1>
