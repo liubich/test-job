@@ -8,7 +8,7 @@
       <ul class = "navbar__navitems navitems">
         <li
           class="navitems__item"
-          v-for="(navItem, index) in navItems"
+          v-for="(navItem, index) in pageTexts.navItems"
           :key="index"
         >
         <a
@@ -32,7 +32,7 @@
 export default {
   name: 'NavBar',
   props: {
-    navItems: Array,
+    pageTexts: {},
   },
 };
 </script>
