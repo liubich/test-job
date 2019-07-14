@@ -59,10 +59,6 @@ export default {
   flex-direction: column;
 }
 
-.carousel-page__left-container {
-  display: flex;
-}
-
 .carousel-page__texts-container {
   height: 560px;
   padding: 0 2px;
