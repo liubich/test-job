@@ -1,6 +1,9 @@
 <template>
-  <main>
-    
+  <main class="features-page">
+    <div class="features-page__container">
+      <h1 class="features-page__main-header">{{pageTexts.mainHeader}}</h1>
+      <h2 class="features-page__second-header">{{pageTexts.secondHeader}}</h2>
+    </div>
   </main>
 </template>
 
@@ -16,5 +19,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.features-page__container {
+  width: 100%;
+  max-width: 960px;
+  padding: 100px 0;
+}
+
+.features-page__main-header {
+  padding: 20px 0;
+  font-size: 32px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.features-page__second-header {
+  font-size: 20px;
+  font-family: "PT Sans", sans-serif;
+  color: rgb(49, 56, 65);
+  text-align: center;
+}
 
 </style>
