@@ -17,8 +17,10 @@
         <div class="links__address-container">
           <p v-for="(line, lineIndex) in pageTexts.address" :key="lineIndex" class="links__address">{{line}}</p>
         </div>
-        <div v-for="(column, columnIndex) in pageTexts.linkColumns" :key="columnIndex" class="links__link-column">
-          <a v-for="(link, linkIndex) in column" :key="linkIndex" class="links__link" href="#">{{link}}</a>
+        <div class="links__links-columns">
+          <div v-for="(column, columnIndex) in pageTexts.linkColumns" :key="columnIndex" class="links__link-column">
+            <a v-for="(link, linkIndex) in column" :key="linkIndex" class="links__link" href="#">{{link}}</a>
+          </div>
         </div>
       </div>
     </div>
@@ -118,19 +120,24 @@ export default {
 }
 
 .links {
-  padding: 70px 0 140px 0;
+  padding: 60px 0 130px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.links__links-columns {
   display: flex;
   flex-wrap: wrap;
 }
 
 .links__address-container {
   width: 190px;
-  margin: 0 60px 0 20px;
+  margin: 10px 60px 10px 20px;
 }
 
 .links__link-column {
   width: 80px;
-  margin: 0 60px 0 20px;
+  margin: 10px 60px 10px 20px;
   display: flex;
   flex-direction: column;
 }
