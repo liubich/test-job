@@ -107,4 +107,18 @@ export default {
   color: white;
 }
 
+@media screen and (max-width: 850px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+  }
+  .navitems__item {
+    display: none;
+  }
+}
 </style>
