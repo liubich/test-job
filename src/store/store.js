@@ -59,6 +59,24 @@ export default new Vuex.Store({
         },
       ],
     },
+    footerPageTexts: {
+      mainHeader: 'Keep in touch with us',
+      secondHeader:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.',
+      inputText: 'Enter your email to update',
+      buttonText: 'SUBMIT',
+      address: [
+        'HALOVIETNAM LTD 66, Dang Van ngu, Dong Da Hanoi, Vietnam',
+        'contact@halovietnam.com',
+        '+844 35149182',
+      ],
+      linkColumns: [
+        ['Examples', 'Shop', 'License'],
+        ['Contact', 'About', 'Privacy Terms'],
+        ['Download', 'Support', 'Documents'],
+        ['Media', 'Blog', 'Forums'],
+      ],
+    },
   },
   mutations: {},
   actions: {},

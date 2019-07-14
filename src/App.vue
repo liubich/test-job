@@ -20,7 +20,7 @@ export default {
     FeaturesPage,
   },
   computed: {
-    ...mapState(['navItems', 'carouselPageTexts', 'featuresPageTexts']),
+    ...mapState(['navItems', 'carouselPageTexts', 'featuresPageTexts', 'footerPageTexts']),
   },
 };
 </script>
