@@ -116,8 +116,9 @@ export default {
     z-index: 10;
     margin: 0;
     padding: 0;
+    background-color: rgba(252, 219, 0, 0.75);
   }
-  
+
   .navitems {
     display: none;
   }
