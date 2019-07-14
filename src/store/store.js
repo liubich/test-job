@@ -25,31 +25,37 @@ export default new Vuex.Store({
           featureHeader: 'Fully Responsive',
           featureDescription:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          imgName: 'phone',
         },
         {
           featureHeader: 'Fully Layered PSD',
           featureDescription:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          imgName: 'lemon',
         },
         {
           featureHeader: 'Font Awesome Icons',
           featureDescription:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          imgName: 'folder',
         },
         {
           featureHeader: 'HTML3 & CSS3 ',
           featureDescription:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          imgName: 'tag',
         },
         {
           featureHeader: 'Email Template',
           featureDescription:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          imgName: 'mail',
         },
         {
           featureHeader: 'Free to download',
           featureDescription:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          imgName: 'tie',
         },
       ],
     },
