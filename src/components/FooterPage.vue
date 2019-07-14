@@ -90,6 +90,11 @@ export default {
   cursor: pointer;
 }
 
+.footer-page__submit-button:hover {
+  transition: color 1s;
+  color: white;
+}
+
 .footer-page__social-container {
   padding: 60px 0;
   display: flex;
@@ -99,4 +104,5 @@ export default {
   padding: 0 16px;
   cursor: pointer;
 }
+
 </style>
