@@ -3,6 +3,7 @@
     <NavBar :navItems = "navItems"/>
     <CarouselLogic :pageTexts = "carouselPageTexts"/>
     <FeaturesPage :pageTexts = "featuresPageTexts"/>
+    <FooterPage :pageTexts = "footerPageTexts"/>
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import { mapState } from 'vuex';
 import NavBar from './components/NavBar.vue';
 import CarouselLogic from './components/CarouselLogic.vue';
 import FeaturesPage from './components/FeaturesPage.vue';
+import FooterPage from './components/FooterPage.vue';
 
 export default {
   name: 'app',
@@ -18,6 +20,7 @@ export default {
     NavBar,
     CarouselLogic,
     FeaturesPage,
+    FooterPage,
   },
   computed: {
     ...mapState(['navItems', 'carouselPageTexts', 'featuresPageTexts', 'footerPageTexts']),
