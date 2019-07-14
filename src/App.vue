@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <NavBar :navItems = "navItems"/>
-    <CarouselPage :pageTexts = "carouselPageTexts"/>
+    <CarouselLogic :pageTexts = "carouselPageTexts"/>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import NavBar from './components/NavBar.vue';
-import CarouselPage from './components/CarouselPage.vue';
+import CarouselLogic from './components/CarouselLogic.vue';
 
 export default {
   name: 'app',
   components: {
     NavBar,
-    CarouselPage,
+    CarouselLogic,
   },
   computed: {
     ...mapState(['navItems', 'carouselPageTexts']),
