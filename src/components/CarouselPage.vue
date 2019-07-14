@@ -60,7 +60,6 @@ export default {
 }
 
 .carousel-page__texts-container {
-  /* height: 560px; */
   padding: 40px 2px;
   display: flex;
   flex-direction: column;
