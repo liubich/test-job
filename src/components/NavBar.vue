@@ -117,7 +117,8 @@ export default {
     margin: 0;
     padding: 0;
   }
-  .navitems__item {
+  
+  .navitems {
     display: none;
   }
 }
