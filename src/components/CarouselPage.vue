@@ -53,15 +53,15 @@ export default {
 }
 
 .carousel-page__left-container {
-  padding: 0 18px;
+  padding: 80px 18px 168px 0;
   width: 400px;
   display: flex;
   flex-direction: column;
 }
 
 .carousel-page__texts-container {
-  height: 560px;
-  padding: 0 2px;
+  /* height: 560px; */
+  padding: 40px 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
