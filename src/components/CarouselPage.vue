@@ -14,12 +14,11 @@
           </p>
         </div>
         <div class="carousel-page__icons-container">
-        <img class="carousel-page__icon" src="../../public/img/icon-fa-apple.png" alt="apple">
-        <img class="carousel-page__icon" src="../../public/img/icon-fa-android.png" alt="android">
-        <img class="carousel-page__icon" src="../../public/img/icon-fa-windows.png" alt="windows">
+          <img class="carousel-page__icon" src="../../public/img/icon-fa-apple.png" alt="apple">
+          <img class="carousel-page__icon" src="../../public/img/icon-fa-android.png" alt="android">
+          <img class="carousel-page__icon" src="../../public/img/icon-fa-windows.png" alt="windows">
+        </div>
       </div>
-      </div>
-      
     </div>
   </header>
 </template>
