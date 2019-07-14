@@ -20,6 +20,9 @@
         </a>
         </li>
       </ul>
+      <div class="navbar__menu-container">
+        <div class="navbar__menu"></div>
+      </div>
     </div>
   </nav>
 </template>
@@ -94,7 +97,6 @@ export default {
   width: 150px;
 }
 
-
 .navitems__item-text {
   font-weight: bold;
   font-size: 22px;
@@ -107,20 +109,69 @@ export default {
   color: white;
 }
 
+.navbar__menu-container {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%,-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar__menu {
+  width: 40px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  transition: .3s;
+}
+
+.navbar__menu:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  top: 15px;
+  background-color: black;
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  transition: .5s;
+}
+
+.navbar__menu:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  top: -15px;
+  background-color: black;
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  transition: .5s;
+}
+
 @media screen and (max-width: 850px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(252, 219, 0, 0.75);
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(252, 219, 0, 0.75);
+}
 
   .navitems {
     display: none;
+  }
+
+  .navbar__menu-container {
+    display: block;
   }
 }
 </style>
