@@ -22,6 +22,7 @@
       </ul>
       <div class="navbar__menu-container">
         <div class="navbar__menu"></div>
+        <p class="navbar__menu-caption">{{pageTexts.menuText}}</p>
       </div>
     </div>
   </nav>
@@ -110,19 +111,20 @@ export default {
 }
 
 .navbar__menu-container {
+  padding-left: 55px;
   position: absolute;
   top: 50%;
   left: 65%;
   transform: translate(-50%,-50%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   display: none;
 }
 
 .navbar__menu {
-  width: 40px;
-  height: 5px;
+  width: 30px;
+  height: 4px;
   background-color: black;
   position: absolute;
   top: 50%;
@@ -135,9 +137,9 @@ export default {
 .navbar__menu:before {
   content: '';
   position: absolute;
-  width: 40px;
-  height: 5px;
-  top: 15px;
+  width: 30px;
+  height: 4px;
+  top: 11px;
   background-color: black;
   box-shadow: 0 3px 5px rgba(0,0,0,.3);
   transition: .5s;
@@ -146,12 +148,18 @@ export default {
 .navbar__menu:after {
   content: '';
   position: absolute;
-  width: 40px;
-  height: 5px;
-  top: -15px;
+  width: 30px;
+  height: 4px;
+  top: -11px;
   background-color: black;
   box-shadow: 0 3px 5px rgba(0,0,0,.3);
   transition: .5s;
+}
+
+.navbar__menu-caption {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
 }
 
 @media screen and (max-width: 850px) {
@@ -171,7 +179,8 @@ export default {
   }
 
   .navbar__menu-container {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 </style>
