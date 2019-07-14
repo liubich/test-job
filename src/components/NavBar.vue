@@ -162,7 +162,7 @@ export default {
   left: 0;
   z-index: 10;
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
   background-color: rgba(252, 219, 0, 0.75);
 }
 
