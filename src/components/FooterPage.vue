@@ -72,7 +72,6 @@ export default {
 }
 
 .footer-page__subscription {
-  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,6 +82,7 @@ export default {
   border-radius: 5px;
   width: 580px;
   height: 50px;
+  margin: 20px 0;
   border-style: none;
   border-radius: 4px;
   font-size: 16px;
