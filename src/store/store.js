@@ -18,31 +18,38 @@ export default new Vuex.Store({
     },
     featuresPageTexts: {
       mainHeader: 'Tinyone features',
-      secondHeader: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.',
+      secondHeader:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.',
       features: [
         {
           featureHeader: 'Fully Responsive',
-          featurDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          featureDescription:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
         },
         {
           featureHeader: 'Fully Layered PSD',
-          featurDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          featureDescription:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
         },
         {
           featureHeader: 'Font Awesome Icons',
-          featurDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          featureDescription:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
         },
         {
           featureHeader: 'HTML3 & CSS3 ',
-          featurDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          featureDescription:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
         },
         {
           featureHeader: 'Email Template',
-          featurDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          featureDescription:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
         },
         {
           featureHeader: 'Free to download',
-          featurDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
+          featureDescription:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.',
         },
       ],
     },
