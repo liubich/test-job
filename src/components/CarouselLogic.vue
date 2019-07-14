@@ -47,6 +47,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 50px;
+}
+
 .swiper-pagination-bullets.swiper-pagination-bullet-custom {
   width: 14px;
   height: 14px;
