@@ -71,6 +71,10 @@ export default {
 
 .footer-page__subscription {
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer-page__input-field {
@@ -116,6 +120,7 @@ export default {
 .links {
   padding: 70px 0 140px 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .links__address-container {
