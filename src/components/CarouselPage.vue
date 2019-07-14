@@ -88,6 +88,7 @@ export default {
 
 .carousel-page__icon {
   margin-right: 38px;
+  cursor: pointer;
 }
 
 </style>
