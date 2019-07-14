@@ -3,6 +3,15 @@
     <div class="features-page__container">
       <h1 class="features-page__main-header">{{pageTexts.mainHeader}}</h1>
       <h2 class="features-page__second-header">{{pageTexts.secondHeader}}</h2>
+      <div class="features-page__features-container">
+        <div v-for="(feature, index) in pageTexts.features" :key="index" class="features-page__feature feature">
+          <img class="feature__image" :src="`../../img/${feature.imgName}.png`" :alt="feature.imgName">
+          <dl class="feature__container">
+            <dt class="feature__header">{{feature.featureHeader}}</dt>
+            <dd class="feature__description">{{feature.featureDescription}}</dd>
+          </dl>
+        </div>
+      </div>
     </div>
   </main>
 </template>
