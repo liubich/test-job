@@ -2,6 +2,7 @@
   <div id="app">
     <NavBar :navItems = "navItems"/>
     <CarouselLogic :pageTexts = "carouselPageTexts"/>
+    <FeaturesPage :pageTexts = "featuresPageTexts"/>
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import { mapState } from 'vuex';
 import NavBar from './components/NavBar.vue';
 import CarouselLogic from './components/CarouselLogic.vue';
+import FeaturesPage from './components/FeaturesPage.vue';
 
 export default {
   name: 'app',
   components: {
     NavBar,
     CarouselLogic,
+    FeaturesPage,
   },
   computed: {
     ...mapState(['navItems', 'carouselPageTexts', 'featuresPageTexts']),
