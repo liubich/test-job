@@ -13,10 +13,13 @@
             {{pageTexts.simpleText}}
           </p>
         </div>
+        <div class="carousel-page__icons-container">
+        <img class="carousel-page__icon" src="../../public/img/icon-fa-apple.png" alt="apple">
+        <img class="carousel-page__icon" src="../../public/img/icon-fa-android.png" alt="android">
+        <img class="carousel-page__icon" src="../../public/img/icon-fa-windows.png" alt="windows">
       </div>
-      <div class="carousel-page__icons-container">
-
       </div>
+      
     </div>
   </header>
 </template>
@@ -85,6 +88,10 @@ export default {
   font-size: 16px;
   font-family: "PT Sans", sans-serif;
   color: rgb(85, 85, 85);
+}
+
+.carousel-page__icon {
+  margin-right: 38px;
 }
 
 </style>
