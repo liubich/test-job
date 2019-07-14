@@ -13,6 +13,14 @@
         <img class="footer-page__social-icon" src="../../public/img/google.png" alt="google">
         <img class="footer-page__social-icon" src="../../public/img/pinterest.png" alt="pinterest">
       </div>
+      <div class="footer-page__links links">
+        <div class="links__address-container">
+          <p class="links__address">{{pageTexts.address}}</p>
+        </div>
+        <div v-for="(column, columnIndex) in pageTexts.linkColumns" :key="columnIndex" class="links__link-column">
+          <a v-for="(link, linkIndex) in column" :key="linkIndex" class="links__link" href="#">{{link}}</a>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -103,6 +111,32 @@ export default {
 .footer-page__social-icon {
   padding: 0 16px;
   cursor: pointer;
+}
+
+.links {
+  padding: 70px 0 140px 0;
+  display: flex;
+}
+
+.links__address-container {
+  width: 190px;
+  margin: 0 60px 0 20px;
+}
+
+.links__link-column {
+  width: 80px;
+  margin: 0 60px 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.links__address,
+.links__link {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+  color: white;
+  line-height: 1.25;
 }
 
 </style>
