@@ -17,7 +17,7 @@ export default {
     CarouselLogic,
   },
   computed: {
-    ...mapState(['navItems', 'carouselPageTexts']),
+    ...mapState(['navItems', 'carouselPageTexts', 'featuresPageTexts']),
   },
 };
 </script>
