@@ -19,6 +19,9 @@
           <img class="carousel-page__icon" src="../../public/img/icon-fa-windows.png" alt="windows">
         </div>
       </div>
+      <div class="carousel-page__right-container">
+        <img src="../../public/img/iPad_Mini_White_facing.png" alt="iPad Mini">
+      </div>
     </div>
   </header>
 </template>
@@ -87,6 +90,10 @@ export default {
 .carousel-page__icon {
   margin-right: 38px;
   cursor: pointer;
+}
+
+.carousel-page__right-container {
+  padding: 50px 52px;
 }
 
 </style>
