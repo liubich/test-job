@@ -5,14 +5,16 @@
         <img class="logo__image" alt="fingerprint" src="../../public/img/fingerprint.png">
         <p class="logo__brand-name">tinyone</p>
       </div>
-      <ul class = "navbar__navitems navitems">
+      <ul class = "navbar__navitems navitems" :class="{navitems_active: navbarMenuIsActive}">
         <li
           class="navitems__item"
+          :class="{navitems__item_active: navbarMenuIsActive}"
           v-for="(navItem, index) in pageTexts.navItems"
           :key="index"
         >
         <a
           class="navitems__item-text"
+          :class="{'navitems__item-text_active': navbarMenuIsActive}"
           href="#"
           :style="{ 'font-family': navItem.font }"
         >
@@ -136,7 +138,7 @@ export default {
   background-color: rgba(252, 219, 0, 0.75);
 }
 
-  .navitems {
+  .navitems__item {
     display: none;
   }
 
@@ -207,5 +209,46 @@ export default {
     font-size: 20px;
     color: black;
   }
+
+  .navitems_active {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 53px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+  }
+
+  .navitems_active :last-child {
+    width: 100%;
+  }
+
+  .navitems__item_active {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 44px;
+    z-index: 1;
+    background-color: rgba(252, 219, 0, 0.75);
+  }
+
+  .navitems__item_active :hover {
+    background-color: rgb(252, 235, 0);
+  }
+
+  .navitems__item-text_active {
+    display: block;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    line-height: 44px;
+  }
+
 }
 </style>
