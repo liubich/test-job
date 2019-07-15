@@ -44,6 +44,8 @@ export default {
   max-width: 1924px;
   min-width: 320px;
   padding: 100px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-page__container {
