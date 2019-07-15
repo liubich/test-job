@@ -107,4 +107,10 @@ export default {
   line-height: 1.25;
 }
 
+@media screen and (max-width: 850px) {
+  .feature {
+    padding-top: 45px;
+  }
+}
+
 </style>
