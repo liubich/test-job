@@ -20,8 +20,8 @@
         </a>
         </li>
       </ul>
-      <div class="navbar__menu-container">
-        <div class="navbar__menu"></div>
+      <div @click="toggleNavbarMenuIsActive()" class="navbar__menu-container">
+        <div class="navbar__menu" :class="{navbar__menu_active: this.navbarMenuIsActive}"></div>
         <p class="navbar__menu-caption">{{pageTexts.menuText}}</p>
       </div>
     </div>
@@ -32,6 +32,16 @@
 <script>
 export default {
   name: 'NavBar',
+  data() {
+    return {
+      navbarMenuIsActive: false,
+    };
+  },
+  methods: {
+    toggleNavbarMenuIsActive() {
+      this.navbarMenuIsActive = !this.navbarMenuIsActive;
+    },
+  },
   props: {
     pageTexts: {},
   },
@@ -154,6 +164,21 @@ export default {
   background-color: black;
   box-shadow: 0 3px 5px rgba(0,0,0,.3);
   transition: .5s;
+}
+
+.navbar__menu_active {
+  background-color: transparent;
+  box-shadow: 0 3px 5px rgba(0,0,0,0);
+}
+
+.navbar__menu_active:before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.navbar__menu_active:after {
+  top: 0;
+  transform: rotate(225deg);
 }
 
 .navbar__menu-caption {
