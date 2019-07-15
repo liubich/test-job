@@ -166,4 +166,11 @@ export default {
   line-height: 1.25;
 }
 
+@media screen and (max-width: 850px) {
+  .footer-page__input-field {
+    padding: 0 18px;
+    width: 100%;
+  }
+}
+
 </style>
