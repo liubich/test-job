@@ -249,6 +249,8 @@ export default {
     position: relative;
     text-align: center;
     line-height: 44px;
+    font-size: 16px;
+    text-transform: uppercase;
   }
 
 }
