@@ -96,4 +96,10 @@ export default {
   padding: 50px 52px;
 }
 
+@media screen and (max-width: 850px) {
+  .carousel-page__right-container{
+    display: none;
+  }
+}
+
 </style>
