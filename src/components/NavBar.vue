@@ -121,70 +121,7 @@ export default {
 }
 
 .navbar__menu-container {
-  padding-left: 55px;
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%,-50%);
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
   display: none;
-}
-
-.navbar__menu {
-  width: 30px;
-  height: 4px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: 0 3px 5px rgba(0,0,0,.3);
-  transition: .3s;
-}
-
-.navbar__menu:before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 4px;
-  top: 11px;
-  background-color: black;
-  box-shadow: 0 3px 5px rgba(0,0,0,.3);
-  transition: .5s;
-}
-
-.navbar__menu:after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 4px;
-  top: -11px;
-  background-color: black;
-  box-shadow: 0 3px 5px rgba(0,0,0,.3);
-  transition: .5s;
-}
-
-.navbar__menu_active {
-  background-color: transparent;
-  box-shadow: 0 3px 5px rgba(0,0,0,0);
-}
-
-.navbar__menu_active:before {
-  top: 0;
-  transform: rotate(135deg);
-}
-
-.navbar__menu_active:after {
-  top: 0;
-  transform: rotate(225deg);
-}
-
-.navbar__menu-caption {
-  font-weight: bold;
-  font-size: 20px;
-  color: black;
 }
 
 @media screen and (max-width: 850px) {
@@ -204,8 +141,71 @@ export default {
   }
 
   .navbar__menu-container {
+    padding-left: 55px;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
     display: flex;
     align-items: center;
+  }
+
+  .navbar__menu {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    transition: .3s;
+  }
+
+  .navbar__menu:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    top: 11px;
+    background-color: black;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    transition: .5s;
+  }
+
+  .navbar__menu:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    top: -11px;
+    background-color: black;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    transition: .5s;
+  }
+
+  .navbar__menu_active {
+    background-color: transparent;
+    box-shadow: 0 3px 5px rgba(0,0,0,0);
+  }
+
+  .navbar__menu_active:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  .navbar__menu_active:after {
+    top: 0;
+    transform: rotate(225deg);
+  }
+
+  .navbar__menu-caption {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
   }
 }
 </style>
