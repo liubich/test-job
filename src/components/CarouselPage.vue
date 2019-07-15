@@ -55,7 +55,7 @@ export default {
 }
 
 .carousel-page__left-container {
-  padding: 80px 18px 168px 0;
+  padding: 80px 18px 168px 18px;
   width: 400px;
   display: flex;
   flex-direction: column;
