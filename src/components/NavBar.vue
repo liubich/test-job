@@ -146,7 +146,7 @@ export default {
     padding-left: 55px;
     position: absolute;
     top: 50%;
-    left: 65%;
+    right: 40px;
     transform: translate(-50%,-50%);
     width: 30px;
     height: 30px;
