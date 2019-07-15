@@ -236,6 +236,7 @@ export default {
   }
 
   .navitems__item_active :hover {
+    transition: all 1s;
     background-color: rgb(252, 235, 0);
   }
 
