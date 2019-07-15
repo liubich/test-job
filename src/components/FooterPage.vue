@@ -15,11 +15,24 @@
       </div>
       <div class="footer-page__links links">
         <div class="links__address-container">
-          <p v-for="(line, lineIndex) in pageTexts.address" :key="lineIndex" class="links__address">{{line}}</p>
+          <p
+            v-for="(line, lineIndex) in pageTexts.address"
+            :key="lineIndex" class="links__address">
+            {{line}}
+          </p>
         </div>
         <div class="links__links-columns">
-          <div v-for="(column, columnIndex) in pageTexts.linkColumns" :key="columnIndex" class="links__link-column">
-            <a v-for="(link, linkIndex) in column" :key="linkIndex" class="links__link" href="#">{{link}}</a>
+          <div
+            v-for="(column, columnIndex) in pageTexts.linkColumns"
+            :key="columnIndex"
+            class="links__link-column"
+          >
+            <a
+              v-for="(link, linkIndex) in column"
+              :key="linkIndex" class="links__link"
+              href="#">
+              {{link}}
+            </a>
           </div>
         </div>
       </div>
