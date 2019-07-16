@@ -63,6 +63,7 @@ export default {
 
 .navbar {
   max-width: 1924px;
+  min-width: 320px;
   padding-top: 60px;
   padding-bottom: 12px;
   display: flex;
@@ -219,7 +220,6 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 300px;
   }
 
   .navitems_active :last-child {
