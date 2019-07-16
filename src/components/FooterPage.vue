@@ -4,8 +4,8 @@
       <h1 class="footer-page__main-header">{{pageTexts.mainHeader}}</h1>
       <h6 class="footer-page__second-header">{{pageTexts.secondHeader}}</h6>
       <div class="footer-page__subscription">
-        <input type="text" class="footer-page__input-field" :placeholder="pageTexts.inputText">
-        <button class="footer-page__submit-button">{{pageTexts.buttonText}}</button>
+        <input type="email" class="footer-page__input-field" @change="emailFieldOnChange" @keypress="emailOnKeyPress" :placeholder="pageTexts.inputText">
+        <button class="footer-page__submit-button" @click="emailOnSubmit()">{{pageTexts.buttonText}}</button>
       </div>
       <div class="footer-page__social-container">
         <img class="footer-page__social-icon" src="../../public/img/facebook.png" alt="facebook">
@@ -46,6 +46,32 @@ export default {
   name: 'FooterPage',
   props: {
     pageTexts: {},
+  },
+  data() {
+    return {
+      inputedText: '',
+    };
+  },
+  methods: {
+    emailFieldOnChange(event) {
+      this.inputedText = event.target.value;
+    },
+    emailOnKeyPress(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        this.emailFieldOnChange(event);
+        this.emailOnSubmit();
+      }
+    },
+    emailOnSubmit() {
+      if (this.checkEmail()) {
+        console.log(this.inputedText);
+      };
+    },
+    checkEmail() {
+      const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return pattern.test(String(this.inputedText).toLowerCase());
+    },
   },
 };
 </script>
