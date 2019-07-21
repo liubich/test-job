@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <NavBar :pageTexts = "navbarTexts"/>
-    <CarouselLogic :pageTexts = "carouselPageTexts"/>
-    <FeaturesPage :pageTexts = "featuresPageTexts"/>
-    <FooterPage :pageTexts = "footerPageTexts"/>
+    <NavBar v-if="textsLoaded" :pageTexts = "navbarTexts"/>
+    <CarouselLogic v-if="textsLoaded" :pageTexts = "carouselPageTexts"/>
+    <FeaturesPage v-if="textsLoaded" :pageTexts = "featuresPageTexts"/>
+    <FooterPage v-if="textsLoaded" :pageTexts = "footerPageTexts"/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import NavBar from './components/NavBar.vue';
 import CarouselLogic from './components/CarouselLogic.vue';
 import FeaturesPage from './components/FeaturesPage.vue';
@@ -22,8 +22,14 @@ export default {
     FeaturesPage,
     FooterPage,
   },
+  created() {
+    this.loadTexts();
+  }, 
   computed: {
-    ...mapState(['navbarTexts', 'carouselPageTexts', 'featuresPageTexts', 'footerPageTexts']),
+    ...mapState(['navbarTexts', 'carouselPageTexts', 'featuresPageTexts', 'footerPageTexts', 'textsLoaded']),
+  },
+  methods: {
+    ...mapActions(['loadTexts']),
   },
 };
 </script>
