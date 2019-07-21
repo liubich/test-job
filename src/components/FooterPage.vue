@@ -5,10 +5,20 @@
       <h6 class="footer-page__second-header">{{pageTexts.secondHeader}}</h6>
       <div class="footer-page__subscription">
         <div class="footer-page__input-field-container">
-          <input type="email" :class="[inputFieldClassString, 'footer-page__input-field']"  @change="emailFieldOnChange" @keypress="emailOnKeyPress" :placeholder="pageTexts.inputText">
+          <input
+            type="email"
+            :class="[inputFieldClassString, 'footer-page__input-field']"
+            @change="emailFieldOnChange"
+            @keypress="emailOnKeyPress"
+            :placeholder="pageTexts.inputText"
+          >
           <p class="footer-page__input-error-desc">{{errorText}}</p>
         </div>
-        <button class="footer-page__submit-button" @click="emailOnSubmit">{{pageTexts.buttonText}}</button>
+        <button
+          class="footer-page__submit-button"
+          @click="emailOnSubmit">
+          {{pageTexts.buttonText}}
+        </button>
       </div>
       <div class="footer-page__social-container">
         <img class="footer-page__social-icon" src="../../public/img/facebook.png" alt="facebook">
