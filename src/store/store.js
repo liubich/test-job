@@ -81,16 +81,41 @@ export default new Vuex.Store({
         ['Media', 'Blog', 'Forums'],
       ],
     },
-    emailAddress: '',
+    sendMailData: {
+      service_id: 'mailgun',
+      template_id: 'template_qUw1lDLV',
+      user_id: 'user_ctJL5infGUuqJCvhaawOl',
+      template_params: {
+        to: '',
+        madeBy: 'Oleksandr Liubich',
+      },
+    },
   },
   mutations: {
     [mutationTypes.SAVE_EMAIL](state, emailAddress) {
-      state.emailAddress = emailAddress;
+      state.sendMailData.template_params.to = emailAddress;
     },
   },
   actions: {
-    sendEmail({ commit }, emailAddress) {
+    sendEmail({ state, commit }, emailAddress) {
       commit('SAVE_EMAIL', emailAddress);
+      fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(state.sendMailData),
+      })
+        .then((httpResponse) => {
+          if (httpResponse.ok) {
+            console.log('Your mail is sent!');
+            return;
+          }
+          httpResponse.text().then(text => Promise.reject(text));
+        })
+        .catch((error) => {
+          console.log(`Oops... ${error}`);
+        });
     },
   },
 });
