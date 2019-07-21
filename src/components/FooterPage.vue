@@ -4,7 +4,10 @@
       <h1 class="footer-page__main-header">{{pageTexts.mainHeader}}</h1>
       <h6 class="footer-page__second-header">{{pageTexts.secondHeader}}</h6>
       <div class="footer-page__subscription">
-        <input type="email" class="footer-page__input-field" @change="emailFieldOnChange" @keypress="emailOnKeyPress" :placeholder="pageTexts.inputText">
+        <div class="footer-page__input-field-container">
+          <input type="email" :class="[inputFieldClassString, 'footer-page__input-field']"  @change="emailFieldOnChange" @keypress="emailOnKeyPress" :placeholder="pageTexts.inputText">
+          <p class="footer-page__input-error-desc">{{errorText}}</p>
+        </div>
         <button class="footer-page__submit-button" @click="emailOnSubmit">{{pageTexts.buttonText}}</button>
       </div>
       <div class="footer-page__social-container">
@@ -53,7 +56,16 @@ export default {
   data() {
     return {
       emailAddress: '',
+      incorrectEmail: false,
     };
+  },
+  computed: {
+    inputFieldClassString() {
+      return this.incorrectEmail ? 'footer-page__input-field_with-error' : '';
+    },
+    errorText() {
+      return this.incorrectEmail ? `${this.emailAddress} is not a valid email address` : '';
+    },
   },
   methods: {
     ...mapActions(['sendEmail']),
@@ -65,12 +77,16 @@ export default {
         event.preventDefault();
         this.emailFieldOnChange(event);
         this.emailOnSubmit();
+        return;
       }
+      this.incorrectEmail = false;
     },
     emailOnSubmit() {
       if (this.checkEmail()) {
         this.sendEmail(this.emailAddress);
+        return;
       }
+      this.incorrectEmail = true;
     },
     checkEmail() {
       const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -117,22 +133,38 @@ export default {
 }
 
 .footer-page__subscription {
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .footer-page__input-field {
   border-radius: 5px;
   width: 580px;
   height: 50px;
-  margin: 20px 0;
-  border-style: none;
+  margin-bottom: 14px;
+  border: 2px solid;
+  border-color: black;
   border-radius: 4px;
   font-size: 16px;
   font-family: "PT Sans", sans-serif;
   color: rgb(137, 137, 137);
+}
+
+.footer-page__input-field_with-error {
+  border-color: #ff7878;
+  caret-color: #ff7878;
+  margin: 0;
+}
+
+.footer-page__input-error-desc {
+  font-size: 12px;
+  color: #ff7878;
+  padding: 3px 0;
+  word-wrap: wrap;
 }
 
 .footer-page__submit-button {
@@ -197,8 +229,12 @@ export default {
 }
 
 @media screen and (max-width: 850px) {
-  .footer-page__input-field {
+  .footer-page__input-field-container {
+    width: 100%;
     padding: 0 18px;
+  }
+
+  .footer-page__input-field {
     width: 100%;
   }
 }
