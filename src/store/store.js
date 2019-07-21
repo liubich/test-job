@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import * as mutationTypes from './mutationTypes';
 
 Vue.use(Vuex);
 
@@ -80,7 +81,16 @@ export default new Vuex.Store({
         ['Media', 'Blog', 'Forums'],
       ],
     },
+    emailAddress: '',
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    [mutationTypes.SAVE_EMAIL](state, emailAddress) {
+      state.emailAddress = emailAddress;
+    },
+  },
+  actions: {
+    sendEmail({ commit }, emailAddress) {
+      commit('SAVE_EMAIL', emailAddress);
+    },
+  },
 });
