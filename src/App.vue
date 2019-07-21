@@ -24,7 +24,7 @@ export default {
   },
   created() {
     this.loadTexts();
-  }, 
+  },
   computed: {
     ...mapState(['navbarTexts', 'carouselPageTexts', 'featuresPageTexts', 'footerPageTexts', 'textsLoaded']),
   },
