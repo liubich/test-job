@@ -165,7 +165,6 @@ export default {
   border-radius: 5px;
   width: 580px;
   height: 50px;
-  margin-bottom: 14px;
   border: 2px solid;
   border-color: black;
   border-radius: 4px;
@@ -177,10 +176,10 @@ export default {
 .footer-page__input-field_with-error {
   border-color: #ff7878;
   caret-color: #ff7878;
-  margin: 0;
 }
 
 .footer-page__input-error-desc {
+  height: 20px;
   font-size: 12px;
   color: #ff7878;
   padding: 3px 0;
