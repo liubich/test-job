@@ -179,7 +179,7 @@ export default {
 
 .footer-page__submit-button {
   width: 130px;
-  height: 54px;
+  height: 50px;
   margin-left: 21px;
   border-style: none;
   border-radius: 4px;
