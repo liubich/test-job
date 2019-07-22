@@ -12,7 +12,7 @@
             @keydown="emailOnKeyDown"
             :placeholder="pageTexts.inputText"
           >
-          <p class="footer-page__input-error-desc">{{errorText}}</p>
+          <p :class="[errorTextClassString, 'footer-page__input-error-desc']">{{errorText}}</p>
         </div>
         <button
           class="footer-page__submit-button"
@@ -56,7 +56,7 @@
 
 <script>
 
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'FooterPage',
@@ -67,14 +67,22 @@ export default {
     return {
       emailAddress: '',
       incorrectEmail: false,
+      sendToThisAddress: false,
     };
   },
   computed: {
+    ...mapState(['sendStatus']),
     inputFieldClassString() {
       return this.incorrectEmail ? 'footer-page__input-field_with-error' : '';
     },
     errorText() {
-      return this.incorrectEmail ? `${this.emailAddress} is not a valid email address` : '';
+      if (this.incorrectEmail) return `${this.emailAddress} is not a valid email address`;
+      if (!this.sendToThisAddress) return '';
+      if (this.sendStatus.errorOnSend) return `Error on sending email. ${this.sendStatus.errorDescription}`;
+      return 'Email sent successfully.';
+    },
+    errorTextClassString() {
+      return this.sendStatus.errorOnSend || this.incorrectEmail ? '' : 'footer-page__input-error-desc_no-error';
     },
   },
   methods: {
@@ -90,10 +98,12 @@ export default {
         return;
       }
       this.incorrectEmail = false;
+      this.sendToThisAddress = false;
     },
     emailOnSubmit() {
       if (this.checkEmail()) {
         this.sendEmail(this.emailAddress);
+        this.sendToThisAddress = true;
         return;
       }
       this.incorrectEmail = true;
@@ -175,6 +185,10 @@ export default {
   color: #ff7878;
   padding: 3px 0;
   word-wrap: wrap;
+}
+
+.footer-page__input-error-desc_no-error {
+  color: green;
 }
 
 .footer-page__submit-button {
