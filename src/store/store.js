@@ -13,7 +13,7 @@ export default new Vuex.Store({
     featuresPageTexts: {},
     footerPageTexts: {},
     sendMailData: {
-      service_id: 'mailgun',
+      service_id: 'gmail',
       template_id: 'template_qUw1lDLV',
       user_id: 'user_ctJL5infGUuqJCvhaawOl',
       template_params: {
