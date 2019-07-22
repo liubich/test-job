@@ -21,6 +21,10 @@ export default new Vuex.Store({
         madeBy: 'Oleksandr Liubich',
       },
     },
+    sendStatus: {
+      errorOnSend: false,
+      errorDescription: null,
+    },
   },
   mutations: {
     [mutationTypes.SAVE_EMAIL](state, emailAddress) {
@@ -32,6 +36,14 @@ export default new Vuex.Store({
       state.featuresPageTexts = texts.featuresPageTexts;
       state.footerPageTexts = texts.footerPageTexts;
       state.textsLoaded = true;
+    },
+    [mutationTypes.SAVE_SEND_ERROR](state, errorDescription) {
+      state.sendStatus.errorOnSend = true;
+      state.sendStatus.errorDescription = errorDescription;
+    },
+    [mutationTypes.SAVE_SEND_SUCCESS](state) {
+      state.sendStatus.errorOnSend = false;
+      state.sendStatus.errorDescription = null;
     },
   },
   actions: {
@@ -46,12 +58,14 @@ export default new Vuex.Store({
       })
         .then((httpResponse) => {
           if (httpResponse.ok) {
+            commit(mutationTypes.SAVE_SEND_SUCCESS);
             console.log('Your mail is sent!');
             return;
           }
           httpResponse.text().then(text => Promise.reject(text));
         })
         .catch((error) => {
+          commit(mutationTypes.SAVE_SEND_ERROR, error);
           console.log(`Oops... ${error}`);
         });
     },
