@@ -247,6 +247,10 @@ export default {
   .footer-page__input-field {
     width: 100%;
   }
+
+  .footer-page__submit-button {
+    margin: 0;
+  }
 }
 
 </style>
