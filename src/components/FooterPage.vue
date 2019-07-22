@@ -9,7 +9,7 @@
             type="email"
             :class="[inputFieldClassString, 'footer-page__input-field']"
             @change="emailFieldOnChange"
-            @keypress="emailOnKeyPress"
+            @keydown="emailOnKeyDown"
             :placeholder="pageTexts.inputText"
           >
           <p class="footer-page__input-error-desc">{{errorText}}</p>
@@ -82,7 +82,7 @@ export default {
     emailFieldOnChange(event) {
       this.emailAddress = event.target.value;
     },
-    emailOnKeyPress(event) {
+    emailOnKeyDown(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
         this.emailFieldOnChange(event);
