@@ -48,7 +48,7 @@ export default new Vuex.Store({
   },
   actions: {
     sendEmail({ state, commit }, emailAddress) {
-      commit('SAVE_EMAIL', emailAddress);
+      commit(mutationTypes.SAVE_EMAIL, emailAddress);
       fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
         headers: {
@@ -70,7 +70,7 @@ export default new Vuex.Store({
         });
     },
     loadTexts({ commit }) {
-      commit('SAVE_TEXTS', {
+      commit(mutationTypes.SAVE_TEXTS, {
         navbarTexts: pagesTexts.navbarTexts,
         carouselPageTexts: pagesTexts.carouselPageTexts,
         featuresPageTexts: pagesTexts.featuresPageTexts,
