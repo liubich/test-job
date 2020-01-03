@@ -16,7 +16,7 @@
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
-import 'swiper/dist/css/swiper.css';
+import 'swiper/css/swiper.css';
 import CarouselPage from './CarouselPage.vue';
 
 export default {
