@@ -1,21 +1,21 @@
 <template>
-  <swiper :options="swiperOption">
-    <swiper-slide>
+  <Swiper :options="swiperOption">
+    <SwiperSlide>
       <CarouselPage :pageTexts="pageTexts"/>
-    </swiper-slide>
-    <swiper-slide>
+    </SwiperSlide>
+    <SwiperSlide>
       <CarouselPage :pageTexts="pageTexts"/>
-    </swiper-slide>
-    <swiper-slide>
+    </SwiperSlide>
+    <SwiperSlide>
       <CarouselPage :pageTexts="pageTexts"/>
-    </swiper-slide>
+    </SwiperSlide>
     <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
-  </swiper>
+  </Swiper>
 </template>
 
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
 import CarouselPage from './CarouselPage.vue';
 
@@ -25,8 +25,8 @@ export default {
     pageTexts: {},
   },
   components: {
-    swiper,
-    swiperSlide,
+    Swiper,
+    SwiperSlide,
     CarouselPage,
   },
   data() {
