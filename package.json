@@ -8,7 +8,7 @@
     "lint:js": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "2.6.11",
+    "core-js": "2.6.12",
     "swiper": "5.4.5",
     "vue": "2.6.12",
     "vue-awesome-swiper": "4.1.1",
